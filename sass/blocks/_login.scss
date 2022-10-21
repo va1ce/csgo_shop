@@ -1,0 +1,28 @@
+.login {
+    display: flex;
+    text-align: right;
+    justify-content:flex-end;
+    align-items: center;
+    margin: 10px;
+    gap: 5px;
+}
+
+.balance {
+    padding: 8px;
+    font-size: 14px;
+    background: #9bc1ff5d;
+    border-radius: 10px;
+}
+
+.avatar__img {
+    border-radius: 33px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+    width: 55px;
+    aspect-ratio: auto 55 / 55;
+    height: 55px;
+    &:hover {
+        border: 2px solid #8b00ff; /* Ширина, вид и цвет рамки */
+    }
+
+}

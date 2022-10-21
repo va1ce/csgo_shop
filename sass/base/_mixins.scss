@@ -1,0 +1,11 @@
+@mixin desktop {
+    @media (max-width:1050px){
+        .navigation__item {
+            margin-right: 1px;
+        }
+    }
+  }
+
+
+
+
