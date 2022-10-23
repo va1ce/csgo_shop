@@ -10,7 +10,7 @@
 .balance {
     padding: 8px;
     font-size: 14px;
-    background: #9bc1ff5d;
+    background: $background-color;
     border-radius: 10px;
 }
 
@@ -22,7 +22,7 @@
     aspect-ratio: auto 55 / 55;
     height: 55px;
     &:hover {
-        border: 2px solid #8b00ff; /* Ширина, вид и цвет рамки */
+        border: 2px solid $main-color; /* Ширина, вид и цвет рамки */
     }
 
 }

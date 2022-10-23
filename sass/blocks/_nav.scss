@@ -2,9 +2,18 @@
     padding-top: 35px;
     padding-bottom: 33px;
 }
-
 .nav__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.logo {
+    justify-content: center;
+}
+.nav__button {
+    display: none;
+    border: none;
+    background-color: transparent;  
+    width: 48px;
+    height: 48px;
 }

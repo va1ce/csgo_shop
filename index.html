@@ -10,18 +10,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="nav">
         <div class="container">
             <div class="nav__row">
+                <button id="nav__button" class="nav__button">
+                    <img id="nav__button-img" src="./img/nav.svg" alt="nav" >
+                </button>
                 <div class="logo">
                     <a href="#" class="logo">csgo-shop</a>
                 </div>
                 <div class="navigation-list">
-                    <ul class="nav__list">
+                    <ul id="nav" class="nav__list">
                         <li class="navigation__item"><a class="navigation__link" href="#">продать</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#" class="active">купить</a></li>
+                        <li class="navigation__item"><a class="navigation__link navigation__link--active" href="#">купить</a></li> 
                         <li class="navigation__item"><a class="navigation__link" href="#">faq</a></li>
                         <li class="navigation__item"><a class="navigation__link" href="#">отзывы</a></li>
                         <li class="navigation__item"><a class="navigation__link" href="#">бонусы</a></li>
@@ -29,6 +33,7 @@
                         <li class="navigation__item"><a class="navigation__link" href="#">вывод</a></li>
                     </ul>
                 </div>
+                
                 <div class="login">
                     <div class="balance">
                         <span class="current_balance">189.32₽</span>
@@ -48,10 +53,6 @@
                     <h1 class="header__title">Покупай скины</h1>
                     <h1 class="header__title header__title-light">мгновенно!</h1>
                     <span class="header__info">Мгновенно обменивай реальные деньги  и получай крутые скины без задержек!</span>
-                    <div class="header__button">
-                        <button class="header__btn" type="button">приобрести скины</button>
-                    </div>
-                    
                 </div>
                 <div class="header__img">
                     <img class="header__image-ct" src="/img/head.png" alt="csgo-shop">
@@ -62,12 +63,339 @@
     <div class="main">
         <div class="container">
             <div class="skins-market">
-                    <div class="balance">
-                        <span class="current_balance">189.32₽</span>
+                    <div class="sidebar">
+                        <form class="sidebar__form">
+                            <div class="form__filter">
+                                <div class="filter__list">
+                                    <div class="filter__item">
+                                        <div class="filter__title">Цена<span></span></div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Тип<span></span></div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Раритетность</div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Износ</div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Холд</div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Float</div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Фаза</div>
+                                    </div>
+                                    <div class="filter__item">
+                                        <div class="filter__title">Другое</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sidebar__reset">Сбросить фильтры</div>
+                        </form>
+                    </div>
+                    <div class="skins-collection">
+                        <div class="controls">
+                            <div class="controls__left">
+                                <div class="controls__reload">
+                                    <i class="fa fa-refresh"></i>
+                                </div>
+                                <div class="controls__search">
+                                    <input type="text" placeholder="Поиск по скинам" class="search__input">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <div class="controls__right">
+                                <div class="controls__sort">
+                                    Популярность
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <div class="controls__market-cart">
+                                    <span id="market-cart__sum">
+                                        <span id="market-cart__value">0.00</span>
+                                        <i class="fa fa-ruble"></i>
+                                    </span>
+                                    <i class="fa fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skins-obj">
+                            <div class="skins-list">
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            2 дня
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/1.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">Stockholm 2021 Champions Autograph Capsule</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">24.78<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.3157
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/2.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">AWP | Mortis</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">90.21<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.3699
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/3.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">USP | Cortex</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">120.93<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            5 дней
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/4.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">Operation Broken Fang Case</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">101.97<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.3438
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/5.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">AWP | Atheris</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">120.93<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.2450
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/6.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">SSG 08 | Fever Dream</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">32.68<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.1931
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/7.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">Desert Eagle | Mecha Industries</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">230.10<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.1761
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/8.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">AK-47 | Slate</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">156.88<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                    </div>
+                                    <img src="/img/skins/9.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">Dreams & Nightmares Case</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">44.48<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                                <div class="skins-list__item">
+                                    <div class="item__info">
+                                        <div class="skin-info">
+                                            <i class="fa fa-lock"></i>
+                                            13 Часов
+                                        </div>
+                                        <div class="skin-info">
+                                            FT
+                                        </div>
+                                        <div class="skin-info">
+                                            0.2305
+                                        </div>
+                                    </div>
+                                    <img src="/img/skins/10.png" alt="item" class="item__img">
+                                    <a href="#" class="item__link">
+                                        <div class="item__name">Desert Eagle | Light Rail</div>
+                                    </a>
+                                    <div class="item__bottom">
+                                        <div class="price">40.45<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination">
+                                <div class="pagination__list">
+                                    <a class="pagination__link pagination__link--active" href="#">1</a>
+                                    <a class="pagination__link" href="#">2</a>
+                                    <a class="pagination__link" href="#">3</a>   
+                                    <a class="pagination__link" href="#">4</a>   
+                                    <a class="pagination__link" href="#">5</a>   
+                                    <a class="pagination__link" href="#">6</a>   
+                                    <a class="pagination__link" href="#">7</a>   
+                                    <a class="pagination__link" href="#">8</a>   
+                                    <a class="pagination__link" href="#">9</a>
+                                    <a class="pagination__link" href="#">10</a>
+                                    <a class="pagination__link" href="#">след</a>
+                                    <a class="pagination__link" href="#">101</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
             </div>
         </div>
     </div>
-
+    <footer class="footer">
+        <div class="container">
+            <div class="logo footer__logo">
+                    <a href="#" class="logo">csgo-shop</a>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="fa fa-vk" target="_blank"></a>
+                <a href="#" class="fa fa-telegram" target="_blank"></a>
+            </div>
+            <div class="footer__info">
+                <div class="info__text">
+                    Надежный сервис для продаж скинов Steam с быстрыми выплатами
+                </div>
+                <div class="footer__links">
+                    <div class="links__list">
+                        <a class="links__item" href="#">Блог</a>
+                        <a class="links__item" href="#">Купить скины</a>
+                        <a class="links__item" href="#">Гарантии</a>
+                        <a class="links__item" href="#">Контакты</a>
+                        <a class="links__item" href="#">FAQ</a>
+                        <a class="links__item" href="#">Как это работает</a>
+                        <a class="links__item" href="#">Оферта</a>
+                        <a class="links__item" href="#">Отзывы о нас</a>
+                        <a class="links__item" href="#">Правила использования</a>
+                        <a class="links__item" href="#">Политика конфиденциальности</a>
+                        <a class="links__item" href="#">Продать вещи Steam</a>
+                        <a class="links__item" href="#">Продать скины КС ГО</a>
+                        <a class="links__item" href="#">Как продать все вещи в Стиме сразу</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>

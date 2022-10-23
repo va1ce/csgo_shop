@@ -1,7 +1,8 @@
+@import "./vars";
+
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #8b00ff;
-
+    color: $main-color;
 }
 
 .container {

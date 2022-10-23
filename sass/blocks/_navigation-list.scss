@@ -1,21 +1,28 @@
-@import "../base/mixins";
-
-.navigation-list {
-}
 .nav__list {
     display: flex;
     padding-inline-start : 0;
+    &--open {
+        flex-direction: column;
+        row-gap: 20px;
+        font-size: 34px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        min-height: 100vh;
+        background: #bfbfbf;
+        border-radius: 10px;
+    }
 }
-
 .navigation__link {
     padding: 8px;
     font-size: 14px;
     transition: 0.6s linear;
     &:hover {
-        background: #9bc1ff5d;
+        background: $background-color;
         border-radius: 10px;
     }
-    &.active {
+    &--active {
         font-weight: 1000;
     }
 }
@@ -23,8 +30,4 @@
     margin-right: 24px;
     list-style-type: none;
 }
-@media (max-width:1050px){
-    .navigation__item {
-        margin-right: 1px;
-    }
-}
+

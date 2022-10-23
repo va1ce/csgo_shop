@@ -1,0 +1,18 @@
+.pagination__list {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.pagination__link {
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.6s linear;
+    &--active {
+        background: $main-color;
+        color: $white-color;
+    }
+    &:hover {
+        background: $main-color;
+        color: $white-color;
+    }
+}

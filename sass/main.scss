@@ -3,12 +3,20 @@
 @import "./base/vars";
 @import "./base/reset";
 @import "./base/base";
-@import "./base/mixins";
+
 
 // blocks
+@import "./blocks/header";
 @import "./blocks/nav";
 @import "./blocks/logo";
 @import "./blocks/navigation-list";
 @import "./blocks/login";
 @import "./blocks/skins-market";
-@import "./blocks/header";
+@import "./blocks/sidebar";
+@import "./blocks/skins-collection";
+@import "./blocks/controls";
+@import "./blocks/pagination";
+@import "./blocks/footer";
+
+//media
+@import "./base/media";
