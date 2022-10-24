@@ -10,16 +10,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<!--    это старые иконки, уже на две мажорные версии-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="nav">
         <div class="container">
             <div class="nav__row">
+<!--                id лишние, не используются почти никогда -->
                 <button id="nav__button" class="nav__button">
+<!--                    ты подключил иконки выше, лучше их и использовать, а не картинки-->
                     <img id="nav__button-img" src="./img/nav.svg" alt="nav" >
                 </button>
                 <div class="logo">
+<!--                    у тебя уже выше класс logo, стало быть это logo__item например-->
                     <a href="#" class="logo">csgo-shop</a>
                 </div>
                 <div class="navigation-list">
@@ -36,6 +40,7 @@
                 
                 <div class="login">
                     <div class="balance">
+<!--                        здесь не по БЭМ сделал-->
                         <span class="current_balance">189.32₽</span>
                     </div>
                     <div class="avatar">
@@ -51,6 +56,7 @@
             <div class="header__row">
                 <div class="header__text">
                     <h1 class="header__title">Покупай скины</h1>
+<!--                    Это уже не h1, у тебя он только что был, скорее всего это div.header__desc или h2.header__subtitle-->
                     <h1 class="header__title header__title-light">мгновенно!</h1>
                     <span class="header__info">Мгновенно обменивай реальные деньги  и получай крутые скины без задержек!</span>
                 </div>
@@ -66,6 +72,7 @@
                     <div class="sidebar">
                         <form class="sidebar__form">
                             <div class="form__filter">
+<!--                                сделал неплохо, но скрыл все элементы формы, соответственно непонятно как оно выглядит в развёрнутом состоянии-->
                                 <div class="filter__list">
                                     <div class="filter__item">
                                         <div class="filter__title">Цена<span></span></div>
@@ -93,12 +100,15 @@
                                     </div>
                                 </div>
                             </div>
+
+<!--                            это кнопка, она нажимается, это не div-->
                             <div class="sidebar__reset">Сбросить фильтры</div>
                         </form>
                     </div>
                     <div class="skins-collection">
                         <div class="controls">
                             <div class="controls__left">
+<!--                                это кнопка с иконкой-->
                                 <div class="controls__reload">
                                     <i class="fa fa-refresh"></i>
                                 </div>
@@ -108,6 +118,7 @@
                                 </div>
                             </div>
                             <div class="controls__right">
+<!--                                это скорее всего select-->
                                 <div class="controls__sort">
                                     Популярность
                                     <i class="fa fa-chevron-down"></i>
@@ -121,6 +132,7 @@
                                 </div>
                             </div>
                         </div>
+<!--                        это плохое имя класса, судя по всему он вообще не нужен-->
                         <div class="skins-obj">
                             <div class="skins-list">
                                 <div class="skins-list__item">
@@ -159,8 +171,11 @@
                                         <div class="item__name">AWP | Mortis</div>
                                     </a>
                                     <div class="item__bottom">
+<!--                                        по хорошему лучше использовать символ рубля как шрифт, не как иконку,-->
+<!--                                        вот так ₽-->
                                         <div class="price">90.21<i class="fa fa-ruble"></i></div>
                                     </div>
+<!--                                    это кнопка, она кликабельна-->
                                     <div class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
                                     </div>
@@ -342,6 +357,8 @@
                                     </div>
                                 </div>
                             </div>
+
+<!--                            здесь хорошо-->
                             <div class="pagination">
                                 <div class="pagination__list">
                                     <a class="pagination__link pagination__link--active" href="#">1</a>
@@ -377,6 +394,7 @@
                     Надежный сервис для продаж скинов Steam с быстрыми выплатами
                 </div>
                 <div class="footer__links">
+<!--                    а где блок links раз есть элементы links__list? без блока не используют-->
                     <div class="links__list">
                         <a class="links__item" href="#">Блог</a>
                         <a class="links__item" href="#">Купить скины</a>
