@@ -6,23 +6,3 @@
     margin: 10px;
     gap: 5px;
 }
-
-.balance {
-    padding: 8px;
-    font-size: 14px;
-    background: $background-color;
-    border-radius: 10px;
-}
-
-.avatar__img {
-    border-radius: 33px;
-    border: 2px solid transparent;
-    transition: 0.3s;
-    width: 55px;
-    aspect-ratio: auto 55 / 55;
-    height: 55px;
-    &:hover {
-        border: 2px solid $main-color; /* Ширина, вид и цвет рамки */
-    }
-
-}

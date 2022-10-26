@@ -3,12 +3,12 @@
     grid-template-columns: 20% 20% 20% 20% 20%;
 }
 .skins-list__item {
-    background: $white-color;
+    background: var(--white-color);
     position: relative;
     height: 220px;
     display: inline-block;
     color: $main-color;
-    border: 1px solid $second-color;
+    border: 1px solid var(--second-color);
     border-right: none;
     border-bottom: none;
     text-decoration: none;
@@ -18,8 +18,8 @@
     &:hover {
         background-color: #9bc1ff5d;
         .item__to-cart {
-            color: $white-color;
-            background-color: $main-color;
+            color: var(--white-color);
+            background-color: var(--main-color);
         }
     }
 }
@@ -88,5 +88,6 @@
     bottom: 0px;
     z-index: 10;
     width: 100%;
-
+    color: inherit;
+    text-align: left;
 }
