@@ -2,7 +2,6 @@
 @import "./base/reset";
 @import "./base/base";
 
-
 // blocks
 @import "./blocks/header";
 @import "./blocks/nav";
@@ -15,7 +14,8 @@
 @import "./blocks/sidebar";
 @import "./blocks/form-list";
 @import "./blocks/form-content";
-@import "./blocks/skins-collection";
+@import "./blocks/skins-list";
+@import "./blocks/item";
 @import "./blocks/controls";
 @import "./blocks/market-cart";
 @import "./blocks/pagination";

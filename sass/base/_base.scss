@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    color: $main-color;
+    color: var(--main-color);
 }
 .container {
     max-width: 1140px;
@@ -15,5 +15,6 @@ body {
     --white-color : #fff;
     --background-color : #9bc1ff5d;
 }
+
 
 
