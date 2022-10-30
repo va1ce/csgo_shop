@@ -1,7 +1,11 @@
-//это плохо, лучше конкретным ссылкам давать сброс, а не вообще всем,
-//например .link
 a {
+.link {
     text-decoration: none;
     text-transform: uppercase;
     color: inherit;
+}
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;  
 }

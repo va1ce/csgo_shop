@@ -1,15 +1,16 @@
 .footer {
     padding-top: 40px;
     height: 230px;
+    
 }
 .footer__logo{
     text-align: center;
 }
-.links__list {
+.footer__list {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
 }
-.links__item {
+.footer__item {
     opacity: 0.5;
     &:hover {
         opacity: 1;

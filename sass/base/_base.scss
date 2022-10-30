@@ -1,10 +1,7 @@
-@import "./vars";
-
 body {
     font-family: 'Montserrat', sans-serif;
-    color: $main-color;
+    color: var(--main-color);
 }
-
 .container {
     max-width: 1140px;
     margin-left: auto;
@@ -12,5 +9,12 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+:root {
+    --main-color: #8b00ff;
+    --second_color : #A5A6F6;
+    --white-color : #fff;
+    --background-color : #9bc1ff5d;
+}
+
 
 

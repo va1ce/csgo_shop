@@ -10,41 +10,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<!--    это старые иконки, уже на две мажорные версии-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/98a5d75269.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="nav">
         <div class="container">
             <div class="nav__row">
-<!--                id лишние, не используются почти никогда -->
                 <button id="nav__button" class="nav__button">
-<!--                    ты подключил иконки выше, лучше их и использовать, а не картинки-->
                     <img id="nav__button-img" src="./img/nav.svg" alt="nav" >
                 </button>
                 <div class="logo">
-<!--                    у тебя уже выше класс logo, стало быть это logo__item например-->
                     <a href="#" class="logo">csgo-shop</a>
+                <button class="nav__button">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </button>
+                <div class="logo">
+                    <a href="#" class="logo__item link">csgo-shop</a>
                 </div>
-                <div class="navigation-list">
-                    <ul id="nav" class="nav__list">
-                        <li class="navigation__item"><a class="navigation__link" href="#">продать</a></li>
-                        <li class="navigation__item"><a class="navigation__link navigation__link--active" href="#">купить</a></li> 
-                        <li class="navigation__item"><a class="navigation__link" href="#">faq</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">отзывы</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">бонусы</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">пополнение</a></li>
-                        <li class="navigation__item"><a class="navigation__link" href="#">вывод</a></li>
-                    </ul>
-                </div>
-                
+                <ul class="navigation-list">
+                    <li class="navigation-list__item"><a class="navigation-list__link link" href="#">продать</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link navigation-list__link--active link" href="#">купить</a></li> 
+                    <li class="navigation-list__item"><a class="navigation-list__link link" href="#">faq</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link link" href="#">отзывы</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link link" href="#">бонусы</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link link" href="#">пополнение</a></li>
+                    <li class="navigation-list__item"><a class="navigation-list__link link" href="#">вывод</a></li>
+                </ul>
                 <div class="login">
                     <div class="balance">
-<!--                        здесь не по БЭМ сделал-->
                         <span class="current_balance">189.32₽</span>
+                        <span class="balance__item">189.32₽</span>
                     </div>
                     <div class="avatar">
-                        <a href="#"><img src="img/avatar.jpg" class="avatar__img" alt="avatar"></a>
+                        <a href="#"><img src="img/avatar.jpg" class="avatar__img link" alt="avatar"></a>
                     </div>
                 </div>
             </div>
@@ -56,8 +55,8 @@
             <div class="header__row">
                 <div class="header__text">
                     <h1 class="header__title">Покупай скины</h1>
-<!--                    Это уже не h1, у тебя он только что был, скорее всего это div.header__desc или h2.header__subtitle-->
                     <h1 class="header__title header__title-light">мгновенно!</h1>
+                    <h2 class="header__subtitle">мгновенно!</h1>
                     <span class="header__info">Мгновенно обменивай реальные деньги  и получай крутые скины без задержек!</span>
                 </div>
                 <div class="header__img">
@@ -72,53 +71,68 @@
                     <div class="sidebar">
                         <form class="sidebar__form">
                             <div class="form__filter">
-<!--                                сделал неплохо, но скрыл все элементы формы, соответственно непонятно как оно выглядит в развёрнутом состоянии-->
                                 <div class="filter__list">
                                     <div class="filter__item">
                                         <div class="filter__title">Цена<span></span></div>
+                        <form class="sidebar__form form">
+                            <div class="form-list">
+                                    <div class="form__item form__item--opened">
+                                        <div class="form__title">Цена</div>
+                                        <div class="form__content form-content"> <!-- Не уверен что тут праильно по бэм :( -->
+                                            <div class="content__fields fields">
+                                                <div class="field__item">
+                                                    <i class="fa fa-rub"></i>
+                                                    <input type="text" placeholder="0.00" class="field__price">
+                                                </div>
+                                                <div class="spacer">-</div>
+                                                <div class="field__item">
+                                                    <i class="fa fa-rub"></i> 
+                                                    <input type="text" placeholder="∞" class="field__price">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Тип<span></span></div>
+                                    <div class="form__item">
+                                        <div class="form__title">Тип</div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Раритетность</div>
+                                    <div class="form__item">
+                                        <div class="form__title">Раритетность</div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Износ</div>
+                                    <div class="form__item">
+                                        <div class="form__title">Износ</div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Холд</div>
+                                    <div class="form__item">
+                                        <div class="form__title">Холд</div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Float</div>
+                                    <div class="form__item">
+                                        <div class="form__title">Float</div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Фаза</div>
+                                    <div class="form__item">
+                                        <div class="form__title">Фаза</div>
                                     </div>
-                                    <div class="filter__item">
-                                        <div class="filter__title">Другое</div>
+                                    <div class="form__item">
+                                        <div class="form__title">Другое</div>
                                     </div>
-                                </div>
                             </div>
 
-<!--                            это кнопка, она нажимается, это не div-->
+
                             <div class="sidebar__reset">Сбросить фильтры</div>
+                            <button class="form__reset">Сбросить фильтры</button>
                         </form>
                     </div>
                     <div class="skins-collection">
                         <div class="controls">
                             <div class="controls__left">
-<!--                                это кнопка с иконкой-->
                                 <div class="controls__reload">
+                                <button class="controls__reload">
                                     <i class="fa fa-refresh"></i>
-                                </div>
+                                </button>
                                 <div class="controls__search">
-                                    <input type="text" placeholder="Поиск по скинам" class="search__input">
+                                    <input type="text" placeholder="Поиск по скинам" class="controls__input">
                                     <i class="fa fa-search"></i>
                                 </div>
                             </div>
                             <div class="controls__right">
-<!--                                это скорее всего select-->
                                 <div class="controls__sort">
                                     Популярность
                                     <i class="fa fa-chevron-down"></i>
@@ -126,255 +140,263 @@
                                 <div class="controls__market-cart">
                                     <span id="market-cart__sum">
                                         <span id="market-cart__value">0.00</span>
+                                <select class="controls__sort">
+                                    <option value="Выбор">Популярность</option>
+                                </select>
+                                <div class="market-cart">
+                                    <span class="market-cart__sum">
+                                        <span class="market-cart__value">0.00</span>
                                         <i class="fa fa-ruble"></i>
                                     </span>
                                     <i class="fa fa-shopping-cart"></i>
                                 </div>
                             </div>
                         </div>
-<!--                        это плохое имя класса, судя по всему он вообще не нужен-->
                         <div class="skins-obj">
                             <div class="skins-list">
                                 <div class="skins-list__item">
+                        <div class="skins-list">
+                                <div class="skins-list__item item">
+
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             2 дня
                                         </div>
                                     </div>
                                     <img src="/img/skins/1.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">Stockholm 2021 Champions Autograph Capsule</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">24.78<i class="fa fa-ruble"></i></div>
+                                        <div class="price">24.78 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.3157
                                         </div>
                                     </div>
                                     <img src="/img/skins/2.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">AWP | Mortis</div>
                                     </a>
                                     <div class="item__bottom">
-<!--                                        по хорошему лучше использовать символ рубля как шрифт, не как иконку,-->
-<!--                                        вот так ₽-->
                                         <div class="price">90.21<i class="fa fa-ruble"></i></div>
                                     </div>
-<!--                                    это кнопка, она кликабельна-->
                                     <div class="item__to-cart">
-                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                        <div class="price">90.21 ₽</div>
                                     </div>
+                                    <button class="item__to-cart">
+                                        <span><i class="fa fa-cart-plus"></i>В корзину</span>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.3699
                                         </div>
                                     </div>
                                     <img src="/img/skins/3.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">USP | Cortex</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">120.93<i class="fa fa-ruble"></i></div>
+                                        <div class="price">120.93 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             5 дней
                                         </div>
                                     </div>
                                     <img src="/img/skins/4.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link" >
                                         <div class="item__name">Operation Broken Fang Case</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">101.97<i class="fa fa-ruble"></i></div>
+                                        <div class="price">101.97 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.3438
                                         </div>
                                     </div>
                                     <img src="/img/skins/5.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">AWP | Atheris</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">120.93<i class="fa fa-ruble"></i></div>
+                                        <div class="price">120.93 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.2450
                                         </div>
                                     </div>
                                     <img src="/img/skins/6.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">SSG 08 | Fever Dream</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">32.68<i class="fa fa-ruble"></i></div>
+                                        <div class="price">32.68 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.1931
                                         </div>
                                     </div>
                                     <img src="/img/skins/7.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">Desert Eagle | Mecha Industries</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">230.10<i class="fa fa-ruble"></i></div>
+                                        <div class="price">230.10 ₽></div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.1761
                                         </div>
                                     </div>
                                     <img src="/img/skins/8.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">AK-47 | Slate</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">156.88<i class="fa fa-ruble"></i></div>
+                                        <div class="price">156.88 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
                                     </div>
                                     <img src="/img/skins/9.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">Dreams & Nightmares Case</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">44.48<i class="fa fa-ruble"></i></div>
+                                        <div class="price">44.48 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
-                                <div class="skins-list__item">
+                                <div class="skins-list__item item">
                                     <div class="item__info">
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
                                             13 Часов
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             FT
                                         </div>
-                                        <div class="skin-info">
+                                        <div class="item__skin-info">
                                             0.2305
                                         </div>
                                     </div>
                                     <img src="/img/skins/10.png" alt="item" class="item__img">
-                                    <a href="#" class="item__link">
+                                    <a href="#" class="item__link link">
                                         <div class="item__name">Desert Eagle | Light Rail</div>
                                     </a>
                                     <div class="item__bottom">
-                                        <div class="price">40.45<i class="fa fa-ruble"></i></div>
+                                        <div class="price">40.45 ₽</div>
                                     </div>
-                                    <div class="item__to-cart">
+                                    <button class="item__to-cart">
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
-                                    </div>
+                                    </button>
                                 </div>
                             </div>
 
-<!--                            здесь хорошо-->
                             <div class="pagination">
+                        </div>
+                        <div class="pagination">
                                 <div class="pagination__list">
-                                    <a class="pagination__link pagination__link--active" href="#">1</a>
-                                    <a class="pagination__link" href="#">2</a>
-                                    <a class="pagination__link" href="#">3</a>   
-                                    <a class="pagination__link" href="#">4</a>   
-                                    <a class="pagination__link" href="#">5</a>   
-                                    <a class="pagination__link" href="#">6</a>   
-                                    <a class="pagination__link" href="#">7</a>   
-                                    <a class="pagination__link" href="#">8</a>   
-                                    <a class="pagination__link" href="#">9</a>
-                                    <a class="pagination__link" href="#">10</a>
-                                    <a class="pagination__link" href="#">след</a>
-                                    <a class="pagination__link" href="#">101</a>
+                                    <a class="pagination__link pagination__link--active link" href="#">1</a>
+                                    <a class="pagination__link link" href="#">2</a>
+                                    <a class="pagination__link link" href="#">3</a>   
+                                    <a class="pagination__link link" href="#">4</a>   
+                                    <a class="pagination__link link" href="#">5</a>   
+                                    <a class="pagination__link link" href="#">6</a>   
+                                    <a class="pagination__link link" href="#">7</a>   
+                                    <a class="pagination__link link" href="#">8</a>   
+                                    <a class="pagination__link link" href="#">9</a>
+                                    <a class="pagination__link link" href="#">10</a>
+                                    <a class="pagination__link link" href="#">след</a>
+                                    <a class="pagination__link link" href="#">101</a>
                                 </div>
-                            </div>
                         </div>
                     </div>
             </div>
@@ -383,18 +405,17 @@
     <footer class="footer">
         <div class="container">
             <div class="logo footer__logo">
-                    <a href="#" class="logo">csgo-shop</a>
+                    <a href="#" class="logo link">csgo-shop</a>
             </div>
             <div class="footer__social">
-                <a href="#" class="fa fa-vk" target="_blank"></a>
-                <a href="#" class="fa fa-telegram" target="_blank"></a>
+                <a href="#" class="fa fa-vk link" target="_blank"></a>
+                <a href="#" class="fa fa-telegram link" target="_blank"></a>
             </div>
             <div class="footer__info">
                 <div class="info__text">
                     Надежный сервис для продаж скинов Steam с быстрыми выплатами
                 </div>
                 <div class="footer__links">
-<!--                    а где блок links раз есть элементы links__list? без блока не используют-->
                     <div class="links__list">
                         <a class="links__item" href="#">Блог</a>
                         <a class="links__item" href="#">Купить скины</a>
@@ -409,6 +430,20 @@
                         <a class="links__item" href="#">Продать вещи Steam</a>
                         <a class="links__item" href="#">Продать скины КС ГО</a>
                         <a class="links__item" href="#">Как продать все вещи в Стиме сразу</a>
+                    <div class="footer__list">
+                        <a class="footer__item link link" href="#">Блог</a>
+                        <a class="footer__item link" href="#">Купить скины</a>
+                        <a class="footer__item link" href="#">Гарантии</a>
+                        <a class="footer__item link" href="#">Контакты</a>
+                        <a class="footer__item link" href="#">FAQ</a>
+                        <a class="footer__item link" href="#">Как это работает</a>
+                        <a class="footer__item link" href="#">Оферта</a>
+                        <a class="footer__item link" href="#">Отзывы о нас</a>
+                        <a class="footer__item link" href="#">Правила использования</a>
+                        <a class="footer__item link" href="#">Политика конфиденциальности</a>
+                        <a class="footer__item link" href="#">Продать вещи Steam</a>
+                        <a class="footer__item link" href="#">Продать скины КС ГО</a>
+                        <a class="footer__item link" href="#">Как продать все вещи в Стиме сразу</a>
                     </div>
                 </div>
             </div>
