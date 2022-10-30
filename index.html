@@ -10,12 +10,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/98a5d75269.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="nav">
         <div class="container">
             <div class="nav__row">
+                <button id="nav__button" class="nav__button">
+                    <img id="nav__button-img" src="./img/nav.svg" alt="nav" >
+                </button>
+                <div class="logo">
+                    <a href="#" class="logo">csgo-shop</a>
                 <button class="nav__button">
                     <i class="fa-solid fa-bars fa-2x"></i>
                 </button>
@@ -33,6 +39,7 @@
                 </ul>
                 <div class="login">
                     <div class="balance">
+                        <span class="current_balance">189.32₽</span>
                         <span class="balance__item">189.32₽</span>
                     </div>
                     <div class="avatar">
@@ -48,6 +55,7 @@
             <div class="header__row">
                 <div class="header__text">
                     <h1 class="header__title">Покупай скины</h1>
+                    <h1 class="header__title header__title-light">мгновенно!</h1>
                     <h2 class="header__subtitle">мгновенно!</h1>
                     <span class="header__info">Мгновенно обменивай реальные деньги  и получай крутые скины без задержек!</span>
                 </div>
@@ -61,6 +69,11 @@
         <div class="container">
             <div class="skins-market">
                     <div class="sidebar">
+                        <form class="sidebar__form">
+                            <div class="form__filter">
+                                <div class="filter__list">
+                                    <div class="filter__item">
+                                        <div class="filter__title">Цена<span></span></div>
                         <form class="sidebar__form form">
                             <div class="form-list">
                                     <div class="form__item form__item--opened">
@@ -101,12 +114,16 @@
                                         <div class="form__title">Другое</div>
                                     </div>
                             </div>
+
+
+                            <div class="sidebar__reset">Сбросить фильтры</div>
                             <button class="form__reset">Сбросить фильтры</button>
                         </form>
                     </div>
                     <div class="skins-collection">
                         <div class="controls">
                             <div class="controls__left">
+                                <div class="controls__reload">
                                 <button class="controls__reload">
                                     <i class="fa fa-refresh"></i>
                                 </button>
@@ -116,6 +133,13 @@
                                 </div>
                             </div>
                             <div class="controls__right">
+                                <div class="controls__sort">
+                                    Популярность
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                                <div class="controls__market-cart">
+                                    <span id="market-cart__sum">
+                                        <span id="market-cart__value">0.00</span>
                                 <select class="controls__sort">
                                     <option value="Выбор">Популярность</option>
                                 </select>
@@ -128,8 +152,12 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="skins-obj">
+                            <div class="skins-list">
+                                <div class="skins-list__item">
                         <div class="skins-list">
                                 <div class="skins-list__item item">
+
                                     <div class="item__info">
                                         <div class="item__skin-info">
                                             <i class="fa fa-lock"></i>
@@ -165,6 +193,9 @@
                                         <div class="item__name">AWP | Mortis</div>
                                     </a>
                                     <div class="item__bottom">
+                                        <div class="price">90.21<i class="fa fa-ruble"></i></div>
+                                    </div>
+                                    <div class="item__to-cart">
                                         <div class="price">90.21 ₽</div>
                                     </div>
                                     <button class="item__to-cart">
@@ -347,6 +378,9 @@
                                         <span><i class="fa fa-cart-plus"></i>В корзину</span>
                                     </button>
                                 </div>
+                            </div>
+
+                            <div class="pagination">
                         </div>
                         <div class="pagination">
                                 <div class="pagination__list">
@@ -382,6 +416,20 @@
                     Надежный сервис для продаж скинов Steam с быстрыми выплатами
                 </div>
                 <div class="footer__links">
+                    <div class="links__list">
+                        <a class="links__item" href="#">Блог</a>
+                        <a class="links__item" href="#">Купить скины</a>
+                        <a class="links__item" href="#">Гарантии</a>
+                        <a class="links__item" href="#">Контакты</a>
+                        <a class="links__item" href="#">FAQ</a>
+                        <a class="links__item" href="#">Как это работает</a>
+                        <a class="links__item" href="#">Оферта</a>
+                        <a class="links__item" href="#">Отзывы о нас</a>
+                        <a class="links__item" href="#">Правила использования</a>
+                        <a class="links__item" href="#">Политика конфиденциальности</a>
+                        <a class="links__item" href="#">Продать вещи Steam</a>
+                        <a class="links__item" href="#">Продать скины КС ГО</a>
+                        <a class="links__item" href="#">Как продать все вещи в Стиме сразу</a>
                     <div class="footer__list">
                         <a class="footer__item link link" href="#">Блог</a>
                         <a class="footer__item link" href="#">Купить скины</a>
